@@ -112,7 +112,7 @@ Run the development server with:
 </code></pre>
 
 ### conig index.ts file 
-<pre><code>npm run start:dev
+<pre><code>
 </code>import dotenv from 'dotenv';
 dotenv.config();
 
