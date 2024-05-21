@@ -125,7 +125,7 @@ export default {
 
 <pre><code>PORT=5000
 
-DATABASE_URL=mongodb+srv://practise:244346627@cluster0.8ldebrq.mongodb.net/first-project?retryWrites=true&w=majority&appName=Cluster0</code></pre>
+DATABASE_URL=mongodb+srv://<dbName>:<password>@cluster0.8ldebrq.mongodb.net/first-project?retryWrites=true&w=majority&appName=Cluster0</code></pre>
 
 ### server.ts file besic setup 
 <pre>// getting-started.js
