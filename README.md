@@ -98,6 +98,72 @@ Run the development server with:
 </code></pre>
 
 
+# besic mongoose setup in server.ts and env config setup
+
+## Getting Started
+
+<pre><code>project-root
+├── src
+│   ├── app.ts
+│   └── server.ts
+    |--config
+         |--index.ts 
+└── package.json
+</code></pre>
+
+### conig index.ts file 
+<pre><code>npm run start:dev
+</code>import dotenv from 'dotenv';
+dotenv.config();
+
+export default {
+    port:process.env.PORT,
+    db_url:process.env.DATABASE_URL,
+}</code></pre>
+
+### .env file
+
+<pre><code>PORT=5000
+
+DATABASE_URL=mongodb+srv://practise:244346627@cluster0.8ldebrq.mongodb.net/first-project?retryWrites=true&w=majority&appName=Cluster0</code></pre>
+
+### server.ts file besic setup 
+<pre>// getting-started.js
+import mongoose from "mongoose";
+import app from "./app";
+import config from "./config";
+
+async function main() {
+  try {
+    await mongoose.connect(config.db_url as string);
+
+    app.listen(config.port, () => {
+      console.log(`Example app listening on port ${config.port}`);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+main();
+
+</code></pre>
+
+### app.ts besic setup 
+
+<pre><code>import express, { Request, Response } from "express";
+const app = express();
+
+app.get("/", (req: Request, res: Response) => {
+  res.send("Welcome hello world my");
+});
+
+
+
+export default app;
+</code></pre>
+
+
 
 
 
