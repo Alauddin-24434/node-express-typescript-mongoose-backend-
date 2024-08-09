@@ -86,7 +86,7 @@ If you encounter issues running ts-node-dev locally, you can install it globally
 ### 13. Add Development Script to package.json
 
 <pre><code>"scripts": {
-  "start:dev": "ts-node-dev --respawn --transpile-only ./src/app.ts"
+  "start:dev": "ts-node-dev --respawn --transpile-only ./src/server.ts"
 }
 </code></pre>
 This script allows you to start your development server using npm run start:dev, which will use ts-node-dev to watch for file changes and restart the server automatically.
